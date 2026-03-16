@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('Images/background.gif') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-section {
+    text-align: center;
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.username {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.social-btn:hover {
+    background: rgba(128, 128, 128, 0.3);
+    transform: scale(1.03);
+}
+
+.social-btn i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+/* Individual button colors */
+.linkedin { color: #0077b5; }
+.linkedin:hover { color: white; }
+
+.instagram { color: #e4405f; }
+.instagram:hover { color: white; }
+
+.telegram { color: #0088cc; }
+.telegram:hover { color: white; }
+
+.telegram-channel { color: #ff6b00; }
+.telegram-channel:hover { color: white; }
+
+.vk { color: #45668e; }
+.vk:hover { color: white; }
+
+.github { color: #333333; }
+.github:hover { color: white; }
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .profile-section {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .username {
+        font-size: 1.5rem;
+    }
+    
+    .social-btn {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .social-btn i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .username {
+        font-size: 1.3rem;
+    }
+    
+    .social-btn {
+        padding: 12px 15px;
+    }
+}
