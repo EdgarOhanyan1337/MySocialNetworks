@@ -3,13 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.social-btn');
     
     buttons.forEach(button => {
+        // Mouse events for desktop
         button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.02)';
+            if (window.matchMedia('(hover: hover)').matches) {
+                this.style.transform = 'scale(1.03)';
+            }
         });
         
         button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+            if (window.matchMedia('(hover: hover)').matches) {
+                this.style.transform = 'scale(1)';
+            }
         });
+        
+        // Touch events for mobile
+        button.addEventListener('touchstart', function() {
+            this.style.background = 'rgba(128, 128, 128, 0.3)';
+            this.style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        button.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.background = '';
+                this.style.transform = '';
+            }, 150);
+        }, { passive: true });
     });
     
     // Add ripple effect on click

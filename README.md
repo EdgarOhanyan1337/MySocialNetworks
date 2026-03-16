@@ -4,7 +4,7 @@ A modern, responsive social links page with a futuristic design featuring neon g
 
 ## Features
 
-- Fully responsive design for mobile and desktop
+- Fully responsive design for mobile and desktop with optimized touch support
 - Dark theme with neon glow effects
 - Glassmorphism UI elements
 - Animated hover effects and transitions

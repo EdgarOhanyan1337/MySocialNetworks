@@ -122,15 +122,20 @@ body {
 .github:hover { color: white; }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
     .container {
         max-width: 100%;
         padding: 10px;
+        gap: 20px;
     }
     
     .profile-section {
-        padding: 20px;
-        width: 90%;
+        padding: 25px 20px;
+        width: 95%;
     }
     
     .avatar {
@@ -139,30 +144,111 @@ body {
     }
     
     .username {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        gap: 12px;
+        width: 95%;
     }
     
     .social-btn {
-        padding: 15px 20px;
+        padding: 16px 20px;
         font-size: 1rem;
     }
     
     .social-btn i {
         font-size: 1.5rem;
+        margin-right: 12px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .container {
+        gap: 15px;
+    }
+    
+    .profile-section {
+        padding: 20px 15px;
+        width: 100%;
+    }
+    
     .avatar {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 15px;
     }
     
     .username {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    
+    .subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+        width: 100%;
     }
     
     .social-btn {
-        padding: 12px 15px;
+        padding: 14px 16px;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+    
+    .social-btn i {
+        font-size: 1.3rem;
+        margin-right: 10px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .avatar {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .username {
+        font-size: 1.2rem;
+    }
+    
+    .social-btn {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .social-btn i {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .social-btn:active {
+        background: rgba(128, 128, 128, 0.3);
+        transform: scale(0.98);
+    }
+    
+    .avatar:active {
+        transform: scale(0.95);
+    }
+    
+    .social-btn {
+        -webkit-tap-highlight-color: transparent;
     }
 }
